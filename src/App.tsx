@@ -10,7 +10,7 @@ function App() {
   ]);
 
   function createText() {
-    setTexts([...texts, "Texto 5"]);
+    setTexts([...texts, `Texto ${texts.length + 1}`]);
     console.log("Adicionou");
   }
 
@@ -31,8 +31,8 @@ function App() {
             marginRight: "auto",
             borderBottomLeftRadius: 25,
             borderBottomRightRadius: 25,
-            borderTopRightRadius: 6,
-            borderTopLeftRadius: 6,
+            borderTopRightRadius: 25,
+            borderTopLeftRadius: 25,
           }}
         >
           Adicionar Texto
