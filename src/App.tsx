@@ -1,45 +1,6 @@
-import { useState } from "react";
-import { TextArea } from "./components/TextArea";
+import { Carrousel } from "./components/Carrousel";
 
 function App() {
-  const [texts, setTexts] = useState([
-    "Texto 1",
-    "Texto 2",
-    "Texto 3",
-    "Texto 4",
-  ]);
-
-  function createText() {
-    setTexts([...texts, `Texto ${texts.length + 1}`]);
-    console.log("Adicionou");
-  }
-
-  return (
-    <div>
-      {texts.map((jaComValor) => {
-        return <TextArea text={jaComValor} />;
-      })}
-      <div>
-        <button
-          onClick={createText}
-          style={{
-            display: "flex",
-            position: "relative",
-            justifyContent: "center",
-            padding: "20px 40px",
-            marginLeft: "auto",
-            marginRight: "auto",
-            borderBottomLeftRadius: 25,
-            borderBottomRightRadius: 25,
-            borderTopRightRadius: 25,
-            borderTopLeftRadius: 25,
-          }}
-        >
-          Adicionar Texto
-        </button>
-      </div>
-    </div>
-  );
+  return <Carrousel />;
 }
-
 export default App;
