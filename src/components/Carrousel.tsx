@@ -1,3 +1,4 @@
+import styles from "../styles/Decrement.module.css"
 import { useState } from "react";
 
 export function Carrousel() {
@@ -15,15 +16,19 @@ export function Carrousel() {
   }
 
   function Decrement() {
-    if (currentURL > 0 ) {
+    if (currentURL > 0) {
       setcurrentURL(currentURL - 1);
     }
   }
   return (
     <div>
-      <button onClick={Decrement}>left</button>
+      <button className="" onClick={Decrement}>
+        left
+      </button>
       <img src={url[currentURL]} alt="" />
-      <button onClick={Increment}>right</button>
+      <button  onClick={Increment}>
+        right
+      </button>
       <div>{currentURL}</div>
     </div>
   );
